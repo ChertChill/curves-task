@@ -1,0 +1,162 @@
+/* --- Complexity Input --- */
+
+.complexity-input {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    padding-right: 14px;
+}
+
+    .range-track {
+        position: relative;
+        width: 28px;
+        height: calc(100% - 32px);
+
+        overflow: visible;
+        background: transparent;
+        cursor: pointer;
+    }
+
+        .range-thumb {
+            position: absolute;
+            z-index: 11;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            cursor: grab;
+            user-select: none;
+            will-change: top;
+            transition: top 0.1s ease;
+        }
+
+        .range-thumb:active {
+            cursor: grabbing;
+        }
+
+            .range-thumb img {
+                display: block;
+                width: 28px;
+                height: 28px;
+                pointer-events: none;
+            }
+
+        .range-box {
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+
+            width: 48px;
+            height: 321px;
+            background: url('../img/range.svg') center / contain no-repeat;
+
+            pointer-events: none;
+            transition: top 0.1s ease;
+        }
+
+.range-input {
+    position: absolute;
+    opacity: 0;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+
+
+
+/* Отключение стилей, которые создают слайдеру гличи */
+
+input[type="range"]:focus {
+  outline: none; /* Убираем обводку */
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  box-shadow: none;
+  outline: none;
+}
+
+
+
+@media (max-width: 1337px) and (min-width: 769px) {
+
+    .range-track { 
+        width: 24px; 
+        height: calc(100% - 28px);
+    }
+    
+    .range-thumb img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .range-box { 
+        right: 14px;
+        
+        width: 42px;
+        height: 281px;
+    }
+
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+
+    .complexity-input {
+        position: absolute;
+        top: 0;
+
+        align-items: flex-end;
+        justify-content: center;
+
+        height: 8.5rem;
+        padding: 0;
+    }
+
+        .range-track {
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+            height: 3.2rem;
+            margin: 0 1.6rem;
+        }
+
+            .range-thumb {
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+                .range-thumb img {
+                    width: 3.2rem;
+                    height: 3.2rem;
+                    transform: rotate(90deg);
+                }
+
+            .range-box {
+                left: 0;
+                top: -40% !important;
+
+                width: 5.2rem;
+                height: 34.8rem;
+                transform: translateY(-50%) rotate(90deg) !important;
+                margin: 0;
+            }
+}

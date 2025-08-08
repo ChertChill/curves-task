@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Студия цифровых поделок от Яндекс Практикума">
+    <meta name="description" content="Сгенерируйте идею для подарка близким своими руками. Как в детстве, только вместо пластилина и ваты — нейросети и онлайн-сервисы.">
+    <title>Студия цифровых поделок от Яндекс Практикума</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/idea-generator.css">
+    <link rel="stylesheet" href="./styles/input-range.css">
+</head>
+<body>
+
+    <!-- Idea -->
+
+    <section id="idea">
+        <div class="idea-group">
+
+            <h2 class="idea__title">
+                Настройте генератор, чтобы получить идею
+            </h2>
+
+            <div class="idea-generator">
+                <form class="idea-filter">
+
+                    <!-- Recipient -->
+
+                    <div class="idea-recipient">
+                        <p class="idea__text">
+                            Для кого
+                        </p>
+
+                        <div class="recipient-inputs">
+                            <label>
+                                <input type="radio" name="recipient" value="colleagues">
+                                <span class="idea__text">
+                                    Коллеги
+                                </span>
+                            </label>
+                            
+                            <label>
+                                <input type="radio" name="recipient" value="partner">
+                                <span class="idea__text">
+                                    Партнер
+                                </span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="recipient" value="family">
+                                <span class="idea__text">
+                                    Семья
+                                </span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="recipient" value="friends">
+                                <span class="idea__text">
+                                    Друзья
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <div class="recipient__text">
+                            <span class="typing__text idea__text"></span>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Сomplexity -->
+
+                    <div class="idea-complexity">
+                        <div class="complexity-content">
+                            <p class="idea__text">
+                                Потяните ползунок, чтобы выбрать сложность
+                            </p>
+                            
+                            <p class="complexity__type"></p>                            
+                        </div>
+
+                        <div class="complexity-input">
+                            <div class="range-track">
+                                <div class="range-thumb" draggable="false">
+                                    <img src="./img/range-thumb.svg" alt="Иконка поля" draggable="false">
+                                </div>
+
+                                <div class="range-box"></div>
+                            </div>
+
+                            <input type="range" 
+                                    class="range-input" 
+                                    name="complexity"
+                                    min="1" 
+                                    max="60" 
+                                    value="30"
+                                    orient="vertical">
+                        </div>
+                    </div>
+
+
+
+                    <!-- Color -->
+
+                    <div class="idea-color">
+                        <p class="idea__text">
+                            Выберите цвет подарочной бумаги
+                        </p>
+
+                        <div class="color-inputs">
+                            <label>
+                                <input type="radio" name="color" value="#4798FF">
+                                <div class="color-dot"></div>
+                            </label>
+
+                            <label style="justify-content: flex-end;">
+                                <input type="radio" name="color" value="#A8FF82">
+                                <div class="color-dot"></div>
+                            </label>
+                            
+                            <label style="align-items: end;">
+                                <input type="radio" name="color" value="#9761DB">
+                                <div class="color-dot"></div>
+                            </label>
+
+                            <label style="justify-content: flex-end; align-items: end;">
+                                <input type="radio" name="color" value="#0DFDF2">
+                                <div class="color-dot"></div>
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Mood -->
+
+                    <div class="idea-mood">
+                        <p class="idea__text">
+                            Кликните на&nbsp;кружочки, чтобы выбрать настроение идеи
+                        </p>
+
+                        <div class="mood-inputs">
+                            <label>
+                                <input type="radio" name="mood" value="funny">
+                                <img class="mood__icon" src="./img/mood-funny.svg" alt="Иконка смешной идеи">
+
+                                <span class="idea__text">
+                                    Смешная
+                                </span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="mood" value="inspiring">
+                                <img class="mood__icon" src="./img/mood-inspiring.svg" alt="Иконка вдохновляющей идеи">
+
+                                <span class="idea__text">
+                                    Вдохновляющая
+                                </span>
+                            </label>
+
+                            <label>
+                                <input type="radio" name="mood" value="useful">
+                                <img class="mood__icon" src="./img/mood-useful.svg" alt="Иконка полезной идеи">
+
+                                <span class="idea__text">
+                                    Полезная
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Submit button -->
+
+                    <button class="idea__button" type="submit">
+                        Получить идею
+                    </button>
+
+                </form>
+
+
+
+                <!-- Result -->
+
+                <div class="idea-result">
+
+                    <!-- Result block -->
+
+                    <div class="result-block">
+
+                        <div class="result-card">
+
+                            <!-- Front side -->
+
+                            <div class="result-content__front">
+                                <div class="result-text">
+                                    <h3 class="result__title"></h3>
+                                    <p class="result__desc"></p>
+                                </div>
+
+                                <button class="result__button">
+                                    Как сделать?
+                                </button>
+                            </div>
+
+                            <!-- Back side -->
+
+                            <div class="result-content__back">
+                                <div class="result-text">
+                                    <h3 class="result__title">
+                                        Как это сделать?
+                                    </h3>
+
+                                    <p class="result__desc"></p>
+                                </div>
+
+                                <button class="result__button">
+                                    Вернуться к&nbsp;идее
+                                </button>
+                            </div>
+
+                            <!-- Share button -->
+
+                            <div class="share-block">
+                                <div class="share__icon"></div>
+
+                                <div class="share__popup">
+                                    Поделитесь с&nbsp;друзьями генератором&nbsp;&#151; пусть тоже не&nbsp;ломают голову, что подарить
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- Background videos -->
+
+                    <video class="result__video rv__desktop" autoplay muted loop>
+                        <source src="https://code.s3.yandex.net/yolkageneri/1362-980%20(2%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD2).mp4" type="video/mp4">
+                    </video>
+
+                    <video class="result__video rv__mobile" autoplay muted loop>
+                        <source src="https://code.s3.yandex.net/yolkageneri/мобилка%202%20экран.mp4" type="video/mp4">
+                    </video>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Scripts -->
+
+    <script src="./scripts/result-text.js"></script>
+    <script src="./scripts/input-range.js"></script>
+    <script src="./scripts/idea-generator.js"></script>
+    <script src="./scripts/share.js"></script>
+
+</body>
+</html>
