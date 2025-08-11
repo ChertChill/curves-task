@@ -1,54 +1,5 @@
 /* -- Idea Generator -- */
 
-:root {
-    --bg-result: url('./img/result-bg.png');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-}
-
-html {
-    font-size: 10px;
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
-    background-color: #F0F0F0;
-}
-
-img {
-    user-select: none;
-    pointer-events: none;
-}
-
-label input {
-    display: none;
-}
-
-@media (max-width: 1337px) and (min-width: 769px) {
-
-    :root { 
-        --bg-result: url('./img/result-bg-tab.png'); 
-    }
-}
-
-@media (max-width: 768px) {
-
-    :root { 
-        --bg-result: url('./img/result-bg-mob.png');
-    }
-
-    /* -- rem-support -- */
-    html { font-size: calc(100vw / 32.0) !important; }
-
-}
-
-
-
-/* -- idea -- */
-
 #idea {
     max-width: calc(1210px + 128px);
     width: 100%;
@@ -57,9 +8,16 @@ label input {
 }
 
     .idea-group {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         gap: 46px;
     }
 
@@ -86,7 +44,9 @@ label input {
         }
 
         .idea-generator {
+            display: -ms-grid;
             display: grid;
+            -ms-grid-columns: 458px 72px 1fr;
             grid-template-columns: 458px 1fr;
             gap: 72px;
 
@@ -94,19 +54,31 @@ label input {
         }
 
             .idea-filter {
+                display: -ms-grid;
                 display: grid;
+                -ms-grid-columns: 1.2fr 24px 1fr;
                 grid-template-columns: 1.2fr 1fr;
                 gap: 24px;
             }
 
                 .idea__button {
+                    -ms-grid-column: 1;
+                    -ms-grid-column-span: 2;
                     grid-column: 1 / 3;
                     cursor: pointer;
                     white-space: nowrap;
 
+                    display: -webkit-box;
+
+                    display: -ms-flexbox;
+
                     display: flex;
-                    align-items: center;
-                    justify-content: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
 
                     width: 100%;
                     height: 65px;
@@ -121,6 +93,10 @@ label input {
                     letter-spacing: -0.01em;
                     text-align: center; 
                     color: #FFF;
+
+                    -webkit-transition: background 0.1s linear;
+
+                    -o-transition: background 0.1s linear;
 
                     transition: background 0.1s linear;
                 }
@@ -151,18 +127,28 @@ label input {
             }
 
             .idea-generator {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-flow: column nowrap;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: column nowrap;
+                        flex-flow: column nowrap;
                 gap: 26px;
             }
 
                 .idea-filter {
+                    -ms-grid-columns: 1.295fr 24px 1fr 24px 1fr;
                     grid-template-columns: 1.295fr 1fr 1fr;
                     gap: 20px 24px;
                 }
 
                     .idea__button {
+                        -ms-grid-column: 2;
+                        -ms-grid-column-span: 2;
                         grid-column: 2 / 4;
+                        -ms-grid-row: 3;
+                        -ms-grid-row-span: 1;
                         grid-row: 3 / 4;
 
                         height: 56px;
@@ -196,19 +182,30 @@ label input {
             }
 
             .idea-generator {
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-flow: column nowrap;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: column nowrap;
+                        flex-flow: column nowrap;
                 gap: 3.8rem;
             }
 
                 .idea-filter {
+                    display: -ms-grid;
                     display: grid;
+                    -ms-grid-columns: 1fr 2rem 1fr;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 2.4rem 2rem;
                 }
 
                     .idea__button {
+                        -ms-grid-column: 1;
+                        -ms-grid-column-span: 2;
                         grid-column: 1 / 3;
+                        -ms-grid-row: 4;
+                        -ms-grid-row-span: 1;
                         grid-row: 4 / 5;
 
                         height: 5.4rem;
@@ -225,12 +222,25 @@ label input {
 /* -- Recipient -- */
 
 .idea-recipient {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
     grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
     grid-row: 1 / 3;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 14px;
     
     padding: 14px;
@@ -239,7 +249,9 @@ label input {
 }
 
     .recipient-inputs {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 1fr 8px 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 8px;
 
@@ -247,9 +259,15 @@ label input {
     }
     
         .recipient-inputs label {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
 
             height: 46px;
             border-radius: 8px;
@@ -257,7 +275,10 @@ label input {
 
             cursor: pointer;
             text-align: center;
-            user-select: none;
+            -webkit-user-select: none;
+               -moz-user-select: none;
+                -ms-user-select: none;
+                    user-select: none;
         }
 
         .recipient-inputs label:has(input:checked) {
@@ -265,14 +286,21 @@ label input {
         }
 
     .recipient__text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         width: 100%;
         height: 120px;
         padding: 20px;
         border-radius: 8px;
+        background: -o-linear-gradient(108.21deg, #011008 36.18%, #555555 94.48%);
         background: linear-gradient(341.79deg, #011008 36.18%, #555555 94.48%);
     }
 
@@ -283,8 +311,13 @@ label input {
 
         .cursor {
             display: contents;
-            animation: cursor-stand 0.8s step-start infinite
+            -webkit-animation: cursor-stand 0.8s step-start infinite;
+                    animation: cursor-stand 0.8s step-start infinite
         }
+
+@-webkit-keyframes cursor-stand {
+    50% { opacity: 0; }
+}
 
 @keyframes cursor-stand {
     50% { opacity: 0; }
@@ -293,6 +326,8 @@ label input {
 @media (max-width: 1337px) and (min-width: 769px) {
 
     .idea-recipient {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
         grid-row: 1 / 4;
     }
 
@@ -301,7 +336,11 @@ label input {
 @media (max-width: 768px) {
 
     .idea-recipient {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1 / 3;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
         grid-row: 1 / 2;
 
         gap: 1.4rem;
@@ -332,10 +371,17 @@ label input {
 /* -- Complexity -- */
 
 .idea-complexity {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
     grid-row: 1 / 2;
 
+    display: -ms-grid;
+
     display: grid;
+    -ms-grid-columns: 1fr 78px;
     grid-template-columns: 1fr 78px;
     
     border-radius: 8px;
@@ -343,9 +389,16 @@ label input {
 }
 
     .complexity-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: column nowrap;
-        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         gap: 20px;
     
         padding: 14px 0 9px 14px;
@@ -367,13 +420,21 @@ label input {
 @media (max-width: 1337px) and (min-width: 769px) {
 
     .idea-complexity {
+        -ms-grid-columns: 1fr 70px;
         grid-template-columns: 1fr 70px;
     }
 
         .complexity-content {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column nowrap;
+                    flex-flow: column nowrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             gap: 0;
         
             padding: 12px 0 8px 12px;
@@ -392,7 +453,11 @@ label input {
 @media (max-width: 768px) {
 
     .idea-complexity {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
         grid-column: 1 / 2;
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 1;
         grid-row: 3 / 4;
 
         display: block;
@@ -411,7 +476,9 @@ label input {
         }
             .complexity__type {
                 z-index: 20;
-                order: -1;
+                -webkit-box-ordinal-group: 0;
+                    -ms-flex-order: -1;
+                        order: -1;
 
                 font-size: 2.8rem;
                 line-height: 90%;
@@ -425,7 +492,11 @@ label input {
 /* -- Color -- */
 
 .idea-color {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
     grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
     grid-row: 2 / 3;
 
     position: relative;
@@ -439,13 +510,23 @@ label input {
         width: 80%;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
 
-        user-select: none;
+        -webkit-user-select: none;
+
+           -moz-user-select: none;
+
+            -ms-user-select: none;
+
+                user-select: none;
     }
 
     .color-inputs {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
 
         position: relative;
@@ -455,6 +536,8 @@ label input {
     }
 
         .color-inputs label {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             padding: 14px;
             cursor: pointer;
@@ -467,7 +550,9 @@ label input {
                 border-radius: 100%;
                 border: 1px solid #1E1E1E;
 
-                box-sizing: content-box;
+                -webkit-box-sizing: content-box;
+
+                        box-sizing: content-box;
             }
 
             .color-inputs label:has(input:checked) .color-dot {
@@ -480,7 +565,9 @@ label input {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
 
                 width: 8px;
                 height: 8px;
@@ -491,7 +578,11 @@ label input {
 @media (max-width: 1337px) and (min-width: 769px) {
 
     .idea-color {
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
         grid-column: 3 / 4;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
         grid-row: 1 / 2;
 
         height: 126px;
@@ -516,7 +607,11 @@ label input {
 @media (max-width: 768px) {
 
     .idea-color {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 1;
         grid-column: 2 / 3;
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 1;
         grid-row: 3 / 4;
 
         height: 100%;
@@ -548,18 +643,36 @@ label input {
 /* -- Mood -- */
 
 .idea-mood {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
     grid-column: 1 / 3;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
 
     display: flex;
-    flex-flow: column nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
     gap: 14px;
 }
 
     .mood-inputs {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-flow: row nowrap;
-        align-self: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center;
         gap: 8px;
 
         width: 100%;
@@ -574,24 +687,43 @@ label input {
             border-radius: 100px;
             border: 1px solid #1E1E1E;
 
+            display: -webkit-box;
+
+            display: -ms-flexbox;
+
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
 
             cursor: pointer;
             overflow: hidden;
+            -webkit-transition: -webkit-box-flex 0.3s linear;
+            transition: -webkit-box-flex 0.3s linear;
+            -o-transition: flex 0.3s linear;
             transition: flex 0.3s linear;
+            transition: flex 0.3s linear, -webkit-box-flex 0.3s linear, -ms-flex 0.3s linear;
         }
 
         .mood-inputs label:has(input:checked) {
-            flex: 1;
-            justify-content: left;
+            -webkit-box-flex: 1;
+                -ms-flex: 1;
+                    flex: 1;
+            -webkit-box-pack: left;
+                -ms-flex-pack: left;
+                    justify-content: left;
             border-style: dashed;
         }
 
             .mood-inputs .idea__text {
                 display: none;
-                user-select: none;
+                -webkit-user-select: none;
+                   -moz-user-select: none;
+                    -ms-user-select: none;
+                        user-select: none;
             }
 
             .mood-inputs label:has(input:checked) .idea__text {
@@ -599,13 +731,19 @@ label input {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
             }
 
 @media (max-width: 1337px) and (min-width: 769px) {
 
     .idea-mood {
+        -ms-grid-column: 2;
+        -ms-grid-column-span: 2;
         grid-column: 2 / 4;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
         grid-row: 2 / 3;
 
         gap: 10px;
@@ -628,7 +766,11 @@ label input {
 @media (max-width: 768px) {
 
     .idea-mood {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 2;
         grid-column: 1 / 3;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
         grid-row: 2 / 3;
         
         gap: 1.4rem;
@@ -672,16 +814,25 @@ label input {
         border-radius: 8px;
 
         display: none;
-        align-items: center;
-        justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         background-blend-mode: color;
     }
 
         .result-content__front, .result-content__back {
             display: none;
-            flex-flow: column nowrap;
-            justify-content: space-between;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column nowrap;
+                    flex-flow: column nowrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             gap: 24px;
 
             width: 488px;
@@ -692,6 +843,8 @@ label input {
         }
 
         .active {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
         }
 
@@ -720,8 +873,10 @@ label input {
 
                 .result__desc a {
                     color: #4798FF;
-                    text-decoration: underline dashed;
-                    text-decoration-style: dashed;
+                    -webkit-text-decoration: underline dashed;
+                            text-decoration: underline dashed;
+                    -webkit-text-decoration-style: dashed;
+                            text-decoration-style: dashed;
                     text-underline-offset: 4px;
                     text-decoration-thickness: 1px;
                 }
@@ -729,11 +884,24 @@ label input {
             .result__button {
                 cursor: pointer;
                 white-space: nowrap;
-                align-self: flex-end;
+                -ms-flex-item-align: end;
+                    align-self: flex-end;
+
+                display: -webkit-box;
+
+                display: -ms-flexbox;
 
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+
+                width: -webkit-fit-content;
+
+                width: -moz-fit-content;
 
                 width: fit-content;
                 height: 36px;
@@ -797,8 +965,18 @@ label input {
     .result__video {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
         border-radius: 8px;
+
+        -webkit-user-select: none;
+
+           -moz-user-select: none;
+
+            -ms-user-select: none;
+
+                user-select: none;
+        pointer-events: none;
     }
 
 @media (min-width: 769px) {
@@ -903,9 +1081,16 @@ label input {
             top: auto;
             right: 50%;
             bottom: 3.2rem;
-            transform: translateX(50%);
+            -webkit-transform: translateX(50%);
+                -ms-transform: translateX(50%);
+                    transform: translateX(50%);
+
+            display: -ms-grid;
 
             display: grid;
+            -ms-grid-columns: 1fr 5rem -webkit-min-content;
+            -ms-grid-columns: 1fr 5rem min-content;
+            grid-template-columns: 1fr -webkit-min-content;
             grid-template-columns: 1fr min-content;
             gap: 5rem;
 
@@ -914,7 +1099,8 @@ label input {
             border-radius: 0.8rem;
             border: 0.1rem dashed #FFF;
             background: #1E1E1E42;
-            backdrop-filter: blur(0.4rem);
+            -webkit-backdrop-filter: blur(0.4rem);
+                    backdrop-filter: blur(0.4rem);
         }
 
             .share__icon {
@@ -935,7 +1121,9 @@ label input {
                 right: auto;
 
                 display: block;
-                order: -1;
+                -webkit-box-ordinal-group: 0;
+                    -ms-flex-order: -1;
+                        order: -1;
 
                 width: 100%;
                 border: 0;

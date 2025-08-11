@@ -1,0 +1,56 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* -- General Styles -- */
+
+:root {
+    --bg-result: url('./img/result-bg.png');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    background-color: #F0F0F0;
+}
+
+img {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none;
+}
+
+label input {
+    display: none;
+}
+
+@media (max-width: 1337px) and (min-width: 769px) {
+
+    :root { 
+        --bg-result: url('./img/result-bg-tab.png'); 
+    }
+}
+
+@media (max-width: 768px) {
+
+    :root { 
+        --bg-result: url('./img/result-bg-mob.png');
+    }
+
+    /* -- rem-support -- */
+    html { font-size: calc(100vw / 32.0) !important; }
+
+}
