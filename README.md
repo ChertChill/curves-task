@@ -1,7 +1,7 @@
 # Тестовое задание на позицию "Веб-разработчик"
 
 Опубликованная версия – https://chertchill.github.io/curves-task/
-Презентация задания – https://www.loom.com/share/340fa8805b9a49fb90a38193725d00e5?sid=fd2e8657-e391-4492-9246-6848c0e40226
+Презентация задания – [*ссылка*](https://www.loom.com/share/340fa8805b9a49fb90a38193725d00e5?sid=fd2e8657-e391-4492-9246-6848c0e40226)
 
 ### Что сделано:
 - Сверстан лендинг по макету для Figma ([*ссылка*](https://www.figma.com/design/ilqnKiHKDlMcsiSuqFQv5G/Тестовое-задание-Чернов-Матвей---разработчик-на-LPC-2025?t=IWvqS0cFo74IYuoV-1)) (пароль - CURVES25).
